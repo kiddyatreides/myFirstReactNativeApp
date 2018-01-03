@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactRawTextShadowNode ,setState ,ToastAndroid, Text, View, Button, TextInput, ProgressBar, MyLoadingComponent} from 'react-native';
+import { ActivityIndicator ,ReactRawTextShadowNode ,setState ,ToastAndroid, Text, View, Button, TextInput, ProgressBar, MyLoadingComponent} from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 export default class SecondScreen extends React.Component {
@@ -15,9 +15,9 @@ export default class SecondScreen extends React.Component {
         var { dispatch } = this.props.navigation;
 
         const navigateAction = NavigationActions.navigate({
-            routeName: 'FourthScreen',
+            routeName: 'TimerScreen',
             params: {},
-            action: NavigationActions.navigate({routeName: 'FourthScreen'})
+            action: NavigationActions.navigate({routeName: 'TimerScreen'})
         });
 
         const resetAction = NavigationActions.reset({
@@ -35,7 +35,7 @@ export default class SecondScreen extends React.Component {
                 <Text style={styles.owner}>Create by Kiddy</Text>
                 <View style={{marginTop:25}}>
                 <Button
-                    onPress={() => this.props.navigation.dispatch(resetAction)}
+                    onPress={() => this.props.navigation.dispatch(navigateAction)}
                     title="WebView Facebook"
                     color="#841584"
                 />
